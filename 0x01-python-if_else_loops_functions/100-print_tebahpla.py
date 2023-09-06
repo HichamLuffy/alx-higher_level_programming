@@ -8,7 +8,7 @@ def uppercase(str):
             rest_str += c
     return rest_str
 
-for alpha in range(ord('z'), ord('a') - 1, -1):
-    if alpha % 2 != 0:
-        alpha = ord(uppercase(chr(alpha)))
+    for alpha in range(ord('z'), ord('a') - 1, -1):
+        if alpha % 2 != 0:
+            alpha = ord(uppercase(chr(alpha)))
     print("{}".format(chr(alpha)), end="")
