@@ -8,4 +8,4 @@ if __name__ == "__main__":
     x = 0
     for i in range(1, len+1):
         x += int(argv[i])
-    print("{}/n".format(int(x)))
+    print("{:d}".format(x))
