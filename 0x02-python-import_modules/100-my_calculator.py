@@ -19,4 +19,4 @@ if __name__ == "__main__":
         elif operator == "/":
             print("{} / {} = {}".format(a, b, div(a, b)))
         else:
-            exit (1)
+            exit(1)
