@@ -6,4 +6,4 @@ def safe_print_division(a, b):
         inside = None
     finally:
         print("inside result = {}".format(inside))
-        return inside
+        return (inside)
