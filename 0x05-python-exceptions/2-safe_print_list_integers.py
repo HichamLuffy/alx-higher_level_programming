@@ -7,6 +7,6 @@ def safe_print_list_integers(my_list=[], x=0):
             j += 1
             x -= 1
         print("")
-        return True
+        return j
     except IndexError:
         return False
