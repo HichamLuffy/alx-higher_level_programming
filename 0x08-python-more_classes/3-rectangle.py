@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+#!/usr/bin/python3
 """1-rectangle module"""
 
 
@@ -45,5 +45,8 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         for i in range(self.__height):
-            print("#" * self.__width)
+            if i != self.__height - 1:
+                print("#" * self.__width)
+            else:
+                print("#" * self.__width, end="")
         return ""
