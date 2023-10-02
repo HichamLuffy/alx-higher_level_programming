@@ -3,7 +3,7 @@ import sys
 
 
 def help_N_queen(N):
-    def can_place(pos, position_oc):
+    def possible_to_place(pos, position_oc):
         for i in range(len(position_oc)):
             if position_oc[i] == pos or \
                     position_oc[i] - i == pos - len(position_oc) or \
@@ -11,16 +11,16 @@ def help_N_queen(N):
                 return False
         return True
 
-    def place_queen(position_oc, row_target, N):
+    def plc_queen(position_oc, row_target, N):
         if row_target == N:
             result.append(position_oc)
             return
         for column in range(N):
-            if can_place(column, position_oc):
-                place_queen(position_oc + [column], row_target + 1, N)
+            if possible_to_place(column, position_oc):
+                plc_queen(position_oc + [column], row_target + 1, N)
 
     result = []
-    place_queen([], 0, N)
+    plc_queen([], 0, N)
     return result
 
 
