@@ -52,7 +52,8 @@ class Rectangle:
             if i != self.__height - 1:
                 print("{}".format(str(self.print_symbol) * self.__width))
             else:
-                print("{}".format(str(self.print_symbol) * self.__width), end="")
+                print("{}".format(str(self.print_symbol) * self.__width),
+                      end="")
         return ""
 
     def __repr__(self):
