@@ -2,6 +2,6 @@
 """copy_list"""
 
 
-def copy_list(l):
+def copy_list(b):
     """copy_list"""
-    return l[:]
+    return b[:]
