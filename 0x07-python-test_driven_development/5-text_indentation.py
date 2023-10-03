@@ -1,5 +1,17 @@
 #!/usr/bin/python3
+"""text_indentation module"""
+
+
 def text_indentation(text):
+    """Return the text indented.
+    
+    Args:
+        text (str): The text to indent.
+    Raises:
+        TypeError: If text is not a string.
+    Return:
+        The text indented.
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     alpha = 0
