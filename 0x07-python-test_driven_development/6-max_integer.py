@@ -4,7 +4,6 @@
 
 def max_integer(list=[]):
     """Return the maximum integer in a list.
-    
     Args:
         list (list): The list to search.
     Return:

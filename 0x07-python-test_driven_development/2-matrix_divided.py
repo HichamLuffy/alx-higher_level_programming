@@ -4,7 +4,6 @@
 
 def matrix_divided(matrix, div):
     """Return the matrix divided by a number.
-    
     Args:
         matrix (list): The matrix to divide.
         div (int): The number to divide by.

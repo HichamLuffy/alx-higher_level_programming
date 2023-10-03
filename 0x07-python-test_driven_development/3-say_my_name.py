@@ -4,7 +4,6 @@
 
 def say_my_name(first_name, last_name=""):
     """Return the name of the person.
-    
     Args:
         first_name (str): The first name.
         last_name (str): The last name
