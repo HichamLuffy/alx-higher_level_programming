@@ -10,7 +10,7 @@ def say_my_name(first_name, last_name=""):
     Raises:
         TypeError: If first_name or last_name is not a string
     Return:
-        A string
+        The name
     """
     if type(first_name) is not str:
         raise TypeError("first_name must be a string")

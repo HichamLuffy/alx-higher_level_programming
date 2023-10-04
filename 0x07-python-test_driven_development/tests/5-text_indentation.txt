@@ -7,15 +7,15 @@ This is an example text file in reStructuredText format.  First import
 ``text_indentation`` from the ``5-text_indentation`` module:
 
         Now use it:
-    
-    >>> text_indentation = __import__('5-text_indentation').text_indentation
-    >>> text_indentation('hello. whats your name ?')
-    hello.
-
-    whats your name ?
-
 
     >>> text_indentation = __import__('5-text_indentation').text_indentation
     >>> text_indentation(455454564864456)
     Traceback (most recent call last):
     TypeError: text must be a string
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation('hello. whats your name ?')
+    hello.
+    <BLANKLINE>
+    whats your name ?
+    <BLANKLINE>
