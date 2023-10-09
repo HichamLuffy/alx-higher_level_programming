@@ -7,6 +7,10 @@ This is an example text file in reStructuredText format.  First import
 ``BaseGeometry`` from the ``7-base_geometry`` module:
 
         Now use it:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", 12)
     
     --------------------case negative numbers
 
@@ -73,7 +77,7 @@ This is an example text file in reStructuredText format.  First import
     TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
 
     --------------------case
-    
+
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", None)
