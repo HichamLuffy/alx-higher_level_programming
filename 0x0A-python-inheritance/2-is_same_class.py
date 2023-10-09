@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""print_sorted"""
 
-
-def print_sorted(self):
-    """print the sorted list"""
-    print(sorted(self))
+def is_same_class(obj, a_class):
+    """is_same_class"""
+    return type(obj) is a_class
