@@ -59,4 +59,25 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
-        
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ save_to_file_csv """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w") as file:
+            if list_objs is None:
+                file.write("[]")
+            else:
+                list_dicts = [o.to_dictionary() for o in list_objs]
+                file.write(cls.to_json_string(list_dicts))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ load_from_file_csv """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r") as file:
+                list_dicts = cls.from_json_string(file.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
