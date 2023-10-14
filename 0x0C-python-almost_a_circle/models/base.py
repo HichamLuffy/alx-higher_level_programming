@@ -31,3 +31,10 @@ class Base:
             else:
                 list_dicts = [o.to_dictionary() for o in list_objs]
                 file.write(Base.to_json_string(list_dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ from_json_string """
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
