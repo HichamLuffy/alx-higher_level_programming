@@ -100,6 +100,21 @@ class testSquare(unittest.TestCase):
         self.assertEqual(str(s), "[Square] (1) 3/0 - 2")
         s.update(1, 2, 3, 4)
         self.assertEqual(str(s), "[Square] (1) 3/4 - 2")
+        s.update(x=12)
+        self.assertEqual(str(s), "[Square] (1) 12/4 - 2")
+        s.update(size=7, x=1)
+        self.assertEqual(str(s), "[Square] (1) 1/4 - 7")
+        s.update(size=7, id=89, y=1)
+        self.assertEqual(str(s), "[Square] (89) 1/1 - 7")
+
+        def test_to_dict(self):
+            """test to dict"""
+            s1 = Square(10, 2, 1)
+            self.assertEqual(str(s1), "[Square] (1) 2/1 - 10")
+            self.assertEqual(s1.to_dictionary(), {'id': 1, 'x': 2, 'size': 10, 'y': 1})
+            s2 = Square(1, 1)
+            self.assertEqual(str(s2), "[Square] (1) 1/1 - 1")
+            self.assertEqual(s2.to_dictionary(), {'id': 1, 'size': 1, 'x': 1, 'y': 1})
 
 if __name__ == '__main__':
     unittest.main()
