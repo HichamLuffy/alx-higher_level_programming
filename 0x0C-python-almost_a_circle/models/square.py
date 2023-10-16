@@ -27,47 +27,27 @@ class Square(Rectangle):
         )
 
     def update(self, *args, **kwargs):
-        """ update """
-        if args and len(args) == 0:
-            return
-        elif len(args) == 1:
-            self.id = args[0]
-        elif len(args) == 2:
-            self.id = args[0]
-            self.width = args[1]
-        elif len(args) == 3:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-        elif len(args) == 4:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-        elif len(args) == 5:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
-        elif kwargs and len(kwargs) != 0:
+        """update"""
+        if args and len(args) != 0:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.size = arg
+                if i == 2:
+                    self.x = arg
+                if i == 3:
+                    self.y = arg
+        else:
             for key, value in kwargs.items():
                 if key == "id":
-                    if value is None:
-                        self.__init__(self.width, self.height, self.x, self.y)
-                    else:
-                        self.id = value
-                elif key == "size":
-                    self.width = value
-                    self.height = value
-                elif key == "x":
+                    self.id = value
+                if key == "size":
+                    self.size = value
+                if key == "x":
                     self.x = value
-                elif key == "y":
+                if key == "y":
                     self.y = value
-                elif key == "width":
-                    self.width = value
-                elif key == "height":
-                    self.height = value
 
     def to_dictionary(self):
         """ to_dictionary """
