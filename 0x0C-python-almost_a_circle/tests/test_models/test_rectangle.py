@@ -159,8 +159,6 @@ class TestRectangle(unittest.TestCase):
             r2 = Rectangle(1, 1)
             self.assertEqual(str(r2), "[Rectangle] (2) 0/0 - 1/1")
             self.assertEqual(r2.to_dictionary(), {'x': 0, 'y': 0, 'id': 2, 'width': 1, 'height': 1})
-        
-        def 
 
 
 if __name__ == '__main__':
