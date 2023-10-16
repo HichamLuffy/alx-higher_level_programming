@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""rectangle"""
+"""rectangle module"""
+
+
 from models.base import Base
 
 
 class Rectangle(Base):
-    """rectangle"""
+    """rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """init"""
         super().__init__(id)
