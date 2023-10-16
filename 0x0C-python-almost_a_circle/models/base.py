@@ -119,4 +119,3 @@ class Base:
             myturtle.hideturtle()
 
         myturtle.done()
-    
