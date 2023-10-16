@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """base"""
 import json
+import turtle
 
 
 class Base:
@@ -81,3 +82,40 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ draw """
+        myturtle = turtle.Turtle()
+        myturtle.screen.bgcolor("#641E16")
+        myturtle.pensize(3)
+        myturtle.shape("turtle")
+
+        myturtle.color("0019EA")
+        for rectangle in list_rectangles:
+            myturtle.showturtle()
+            myturtle.penup()
+            myturtle.goto(rectangle.x, rectangle.y)
+            myturtle.pendown()
+            for i in range(2):
+                myturtle.forward(rectangle.width)
+                myturtle.left(90)
+                myturtle.forward(rectangle.height)
+                myturtle.left(90)
+            myturtle.hideturtle()
+
+        myturtle.color("EA0019")
+        for square in list_squares:
+            myturtle.showturtle()
+            myturtle.penup()
+            myturtle.goto(square.x, square.y)
+            myturtle.pendown()
+            for i in range(2):
+                myturtle.forward(square.width)
+                myturtle.left(90)
+                myturtle.forward(square.height)
+                myturtle.left(90)
+            myturtle.hideturtle()
+
+        myturtle.done()
+    

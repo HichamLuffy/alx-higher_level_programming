@@ -20,6 +20,13 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __str__(self):
+        """ str """
+        return "[Square] ({}) {}/{} - {}".format(
+            self.id, self.x, self.y, self.width
+        )
+
+
     def update(self, *args, **kwargs):
         """ update """
         if args and len(args) == 0:

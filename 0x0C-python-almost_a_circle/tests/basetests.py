@@ -1,36 +1,33 @@
 #!/usr/bin/python3
 """test module for base"""
 import os
+import sys
+
+
+current_path = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_path, '..'))
+sys.path.insert(0, project_root)
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBase(unittest.TestCase):
     """test module for base"""
-    def test_no_arg(self):
-        b1 = Base()
-        b2 = Base()
-        self.assertEqual(b1.id, b2.id - 1)
-
-    def test_three_bases(self):
+    def test_id(self):
+        """test id"""
         b1 = Base()
         b2 = Base()
         b3 = Base()
-        self.assertEqual(b1.id, b3.id - 2)
+        b4 = Base(12)
+        b5 = Base()
+        self.assertEqual(b1.id, 1)
+        self.assertEqual(b2.id, 2)
+        self.assertEqual(b3.id, 3)
+        self.assertEqual(b4.id, 12)
+        self.assertEqual(b5.id, 4)
 
-    def test_None_id(self):
-        b1 = Base(None)
-        b2 = Base(None)
-        self.assertEqual(b1.id, b2.id - 1)
-
-    def test_unique_id(self):
-        self.assertEqual(12, Base(12).id)
-
-    def test_nb_instances_after_unique_id(self):
-        b1 = Base()
-        b2 = Base(12)
-        b3 = Base()
-        self.assertEqual(b1.id, b3.id - 1)
 
 if __name__ == '__main__':
     unittest.main()
