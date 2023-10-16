@@ -104,5 +104,6 @@ class testSquare(unittest.TestCase):
         self.assertEqual(str(s), "[Square] (1) 0/0 - 2")
         s.update(1, 2, 3, 4)
         self.assertEqual(str(s), "[Square] (1) 4/0 - 2")
+
 if __name__ == '__main__':
     unittest.main()
