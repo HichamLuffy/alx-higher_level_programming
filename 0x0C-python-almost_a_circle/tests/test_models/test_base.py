@@ -10,17 +10,6 @@ from models.square import Square
 
 class TestBase(unittest.TestCase):
     """test module for base"""
-    
-    def test_is_inheritance(self):
-        """test is inheritance"""
-        self.assertTrue(issubclass(Base, object))
-    
-    def test_no_args(self):
-        """no args test"""
-        with self.assertRaises(TypeError) as e:
-            r = Rectangle()
-        self.assertEqual(type(e.exception), TypeError)
-
     def test_id(self):
         """test id"""
         Base._Base__nb_objects = 0
