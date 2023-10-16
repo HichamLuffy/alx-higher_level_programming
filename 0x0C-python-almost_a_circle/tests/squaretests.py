@@ -2,15 +2,15 @@
 """test module for base"""
 import os
 import sys
+import unittest
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 current_path = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.abspath(os.path.join(current_path, '..'))
 sys.path.insert(0, project_root)
-import unittest
-from models.base import Base
-from models.rectangle import Rectangle
-from models.square import Square
 
 class testSquare(unittest.TestCase):
     def test_is_inheritance(self):
