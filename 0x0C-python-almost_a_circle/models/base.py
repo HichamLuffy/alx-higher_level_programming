@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""base"""
+"""base module"""
 
 
 import json
@@ -7,7 +7,7 @@ import turtle
 
 
 class Base:
-    """base"""
+    """base class"""
     __nb_objects = 0
 
     def __init__(self, id=None):
