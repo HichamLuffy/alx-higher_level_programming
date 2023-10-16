@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""test module for base"""
+"""test module"""
 import os
 import sys
 import unittest
