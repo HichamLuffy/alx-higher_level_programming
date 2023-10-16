@@ -32,6 +32,8 @@ class TestBase(unittest.TestCase):
         json_dictionary = Base.to_json_string([dictionary])
         self.assertEqual(str(json_dictionary), '[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}]')
         self.assertEqual(str(dictionary), "{'id': 1, 'width': 10, 'height': 7, 'x': 2, 'y': 8}")
+        self.assertEqual(type(json_dictionary), str)
+        self.assertEqual(type(dictionary), dict)
 
     def test_save_to_file(self):
         """test save to file"""
@@ -52,6 +54,11 @@ class TestBase(unittest.TestCase):
         json_list_input = Rectangle.to_json_string(list_input)
         list_output = Rectangle.from_json_string(json_list_input)
         self.assertEqual(str(list_input), str(list_output))
+        self.assertNotEqual(id(list_input[0]), id(list_output[0]))
+        self.assertNotEqual(id(list_input[1]), id(list_output[1]))
+        self.assertEqual(list_input[0], list_output[0])
+        self.assertEqual(list_input[1], list_output[1])
+        
 
     def test_create(self):
         """test create"""
