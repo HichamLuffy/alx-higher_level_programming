@@ -155,15 +155,16 @@ class TestRectangle(unittest.TestCase):
         msg4 = "[Rectangle] (89) 1/3 - 4/2"
         self.assertEqual(str(r), msg4)
 
-        def test_to_dict(self):
-            """test to dict"""
-            Base._Base__nb_objects = 0
-            r1 = Rectangle(10, 2, 1, 9)
-            self.assertEqual(str(r1), "[Rectangle] (1) 1/9 - 10/2")
-            self.assertEqual(r1.to_dictionary(), {'x': 1, 'y': 9, 'id': 1, 'width': 10, 'height': 2})
-            r2 = Rectangle(1, 1)
-            self.assertEqual(str(r2), "[Rectangle] (2) 0/0 - 1/1")
-            self.assertEqual(r2.to_dictionary(), {'x': 0, 'y': 0, 'id': 2, 'width': 1, 'height': 1})
+    def test_to_dict(self):
+        """test to dict"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(str(r1), "[Rectangle] (1) 1/9 - 10/2")
+        self.assertEqual(r1.to_dictionary(), {'x': 1, 'y': 9, 'id': 1, 'width': 10, 'height': 2})
+        r2 = Rectangle(1, 1)
+        self.assertEqual(str(r2), "[Rectangle] (2) 0/0 - 1/1")
+        self.assertEqual(r2.to_dictionary(), {'x': 0, 'y': 0, 'id': 2, 'width': 1, 'height': 1})
+
 
 
 if __name__ == '__main__':

@@ -10,6 +10,8 @@ from models.square import Square
 
 class TestBase(unittest.TestCase):
     """test module for base"""
+
+    
     def test_id(self):
         """test id"""
         Base._Base__nb_objects = 0
@@ -58,7 +60,7 @@ class TestBase(unittest.TestCase):
         self.assertNotEqual(id(list_input[1]), id(list_output[1]))
         self.assertEqual(list_input[0], list_output[0])
         self.assertEqual(list_input[1], list_output[1])
-        
+
 
     def test_create(self):
         """test create"""
