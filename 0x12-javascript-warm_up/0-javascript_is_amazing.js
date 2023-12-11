@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 var myVar;
 
 myVar = "JavaScript is amazing";
