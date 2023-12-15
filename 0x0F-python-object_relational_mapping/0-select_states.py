@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-import MySQLdb
-import sys
+
 
 if __name__ == "__main__":
+    import MySQLdb
+    import sys
+
     if len(sys.argv) < 4:
         print("wrong format")
         exit()
@@ -14,7 +16,7 @@ if __name__ == "__main__":
     #connect to database
     db = MySQLdb.connect(host="localhost", user=db_user, passwd=db_pass, db=db_name, port=3306)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY ASC")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     #fetch all
     rows = cursor.fetchall()
