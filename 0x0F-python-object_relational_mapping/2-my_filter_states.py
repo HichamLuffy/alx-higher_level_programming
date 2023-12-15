@@ -6,7 +6,7 @@ if __name__ == "__main__":
     import MySQLdb
     import sys
 
-    if len(sys.argv) < 4:
+    if len(sys.argv) != 4:
         print("wrong format")
         exit()
     # take arguments
