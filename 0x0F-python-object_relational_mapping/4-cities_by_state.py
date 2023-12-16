@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""select states"""
+"""cities by state"""
 
 
 if __name__ == "__main__":
