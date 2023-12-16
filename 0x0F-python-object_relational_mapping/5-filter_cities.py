@@ -13,7 +13,8 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
 
     query = "SELECT name FROM cities WHERE state_id = \
-    (SELECT id FROM states WHERE name = '{}' LIMIT 1) ORDER BY id ASC".format(state_name)\
+    (SELECT id FROM states WHERE name = '{}' LIMIT 1)\
+          ORDER BY id ASC".format(state_name)\
 
     db = MySQLdb.connect(
         host="localhost", user=db_user, passwd=db_pass, db=db_name, port=3306
