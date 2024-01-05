@@ -31,6 +31,5 @@ Welcome to the Alx Higher Level Programming repository! 🚀 This space is a tre
 **HichamLuffy** 🎩
 
 Feel free to explore the content in each folder to dive into the specific topics and projects related to higher-level programming in Python and JavaScript. If you have any questions or need further clarification, don't hesitate to reach out. Happy coding!
-🌟
 
 ![Coding GIF](https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif)
