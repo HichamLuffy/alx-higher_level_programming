@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Python script that takes in a URL, sends a request to the URL and displays the Error code"""
+"""displays the Error code"""
 from sys import argv
 import urllib.request
 import urllib.error
