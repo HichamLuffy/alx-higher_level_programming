@@ -1,6 +1,6 @@
 #!/usr/bin/node
-$(document).ready(function(){
-    $('DIV#add_item').click(function(){
-        $('ul.my_list').append('<li>Item</li>');
-    });
+$(document).ready(function () {
+  $('DIV#add_item').click(function () {
+    $('ul.my_list').append('<li>Item</li>');
+  });
 });
